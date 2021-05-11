@@ -19,8 +19,10 @@
 - [ ] My code follows the code style of the project. _(using `npm run lint`)_
 - [ ] My change introduces changes to the documentation.
 - [ ] I have updated the documentation accordingly.
-- [ ] I have added tests to cover my changes.
+- [ ] I have added **tests** to cover my changes.
 - [ ] All new and existing tests passed.
 
-### Related Issues
+### Related Issues:
 <!--- Please link any related issues here: -->
+
+### [Live Preview](https://deploy-preview-{your pr number}--twbs-bootstrap.netlify.app/)
