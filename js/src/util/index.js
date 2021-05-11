@@ -262,18 +262,18 @@ const execute = callback => {
 }
 
 /**
- * Return the prev/next element of a list.
+ * Return the previous/next element of a list.
  *
- * @param {array} list The list of elements
- * @param activeElement The active element
- * @param getNext Choose to get next or previous element
+ * @param {array} list    The list of elements
+ * @param activeElement   The active element
+ * @param getNext         Choose to get next or previous element
  * @param allowCycle
- * @return {Element|elem}  The proper element
+ * @return {Element|elem} The proper element
  */
 const pickFromList = (list, activeElement = null, getNext = true, allowCycle = true) => {
   let index = list.indexOf(activeElement)
 
-  // ensure index, if element not exists in list initialize it as first element
+  // if the element does not exist in the list initialize it as the first element
   if (index === -1) {
     return list[0]
   }
