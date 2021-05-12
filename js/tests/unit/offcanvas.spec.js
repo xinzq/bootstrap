@@ -183,7 +183,6 @@ describe('Offcanvas', () => {
       spyOn(ScrollBarHelper.prototype, 'reset').and.callThrough()
       const offCanvasEl = fixtureEl.querySelector('.offcanvas')
       const offCanvas = new Offcanvas(offCanvasEl, { scroll: false })
-      const initialOverFlow = document.body.style.overflow
 
       offCanvasEl.addEventListener('shown.bs.offcanvas', () => {
         expect(ScrollBarHelper.prototype.hide).toHaveBeenCalled()
