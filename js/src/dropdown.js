@@ -16,7 +16,7 @@ import {
   isVisible,
   isRTL,
   noop,
-  pickFromList,
+  getNextActiveElement,
   typeCheckConfig
 } from './util/index'
 import Data from './dom/data'
@@ -365,7 +365,7 @@ class Dropdown extends BaseComponent {
       return
     }
 
-    pickFromList(items, event.target, event.key === ARROW_DOWN_KEY, false).focus()
+    getNextActiveElement(items, event.target, event.key === ARROW_DOWN_KEY, false).focus()
   }
 
   // Static

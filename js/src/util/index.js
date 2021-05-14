@@ -270,7 +270,7 @@ const execute = callback => {
  * @param {bool} isCycleAllowed
  * @return {Element|elem} The proper element
  */
-const pickFromList = (list, activeElement = null, shouldGetNext = true, isCycleAllowed = true) => {
+const getNextActiveElement = (list, activeElement = null, shouldGetNext = true, isCycleAllowed = true) => {
   let index = list.indexOf(activeElement)
 
   // if the element does not exist in the list initialize it as the first element
@@ -303,7 +303,7 @@ export {
   isDisabled,
   findShadowRoot,
   noop,
-  pickFromList,
+  getNextActiveElement,
   reflow,
   getjQuery,
   onDOMContentLoaded,

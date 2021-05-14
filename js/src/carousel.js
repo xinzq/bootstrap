@@ -10,7 +10,7 @@ import {
   getElementFromSelector,
   isRTL,
   isVisible,
-  pickFromList,
+  getNextActiveElement,
   reflow,
   triggerTransitionEnd,
   typeCheckConfig
@@ -338,7 +338,7 @@ class Carousel extends BaseComponent {
 
   _getItemByOrder(order, activeElement) {
     const isNext = order === ORDER_NEXT
-    return pickFromList(this._items, activeElement, isNext, this._config.wrap)
+    return getNextActiveElement(this._items, activeElement, isNext, this._config.wrap)
   }
 
   _triggerSlideEvent(relatedTarget, eventDirectionName) {
