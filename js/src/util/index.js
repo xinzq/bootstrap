@@ -266,11 +266,11 @@ const execute = callback => {
  *
  * @param {array} list    The list of elements
  * @param activeElement   The active element
- * @param getNext         Choose to get next or previous element
- * @param allowCycle
+ * @param shouldGetNext         Choose to get next or previous element
+ * @param {bool} isCycleAllowed
  * @return {Element|elem} The proper element
  */
-const pickFromList = (list, activeElement = null, getNext = true, allowCycle = true) => {
+const pickFromList = (list, activeElement = null, shouldGetNext = true, isCycleAllowed = true) => {
   let index = list.indexOf(activeElement)
 
   // if the element does not exist in the list initialize it as the first element
@@ -280,9 +280,9 @@ const pickFromList = (list, activeElement = null, getNext = true, allowCycle = t
 
   const listLength = list.length
 
-  index += getNext ? 1 : -1
+  index += shouldGetNext ? 1 : -1
 
-  if (allowCycle) {
+  if (isCycleAllowed) {
     index = (index + listLength) % listLength
   }
 
