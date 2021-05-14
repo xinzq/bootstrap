@@ -266,7 +266,7 @@ const execute = callback => {
  *
  * @param {array} list    The list of elements
  * @param activeElement   The active element
- * @param shouldGetNext         Choose to get next or previous element
+ * @param shouldGetNext   Choose to get next or previous element
  * @param {bool} isCycleAllowed
  * @return {Element|elem} The proper element
  */
